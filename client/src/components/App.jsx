@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from './Header';
+import AboutMe from './AboutMe';
 
 class App extends Component {
   state = {};
@@ -8,6 +9,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <AboutMe />
       </div>
     );
   }

@@ -3,6 +3,7 @@
 header {
   position: relative;
   height: 500px;
+  border-bottom: 5px solid $main-color;
   .background-image {
     position: absolute;
     top: 0;
@@ -12,7 +13,9 @@ header {
     background-image: url('~/header_train.jpg');
     background-attachment: fixed;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
+    filter: brightness(30%) sepia(0.3);
+    -webkit-filter: brightness(30%) sepia(0.3);
   }
   .container {
     position: relative;
@@ -23,5 +26,44 @@ header {
     align-items: center;
     color: $color-white;
     z-index: 1030;
+    h1 {
+      font: {
+        family: $font-Cinzel;
+        size: 95px;
+      }
+      text-transform: uppercase;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    div {
+      font: {
+        family: $font-Cinzel;
+        size: 20px;
+      }
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    .menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      width: 50%;
+      justify-content: space-between;
+      margin-top: 30px;
+      font: {
+        family: $font-Cinzel;
+        size: 16px;
+      }
+      li {
+        a {
+          color: $color-white;
+          transition: 0.3s;
+          padding: 10px;
+          &:hover {
+            text-decoration: none;
+            color: $main-color;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
   }
 }
