@@ -8,3 +8,23 @@
 
 @import './header';
 @import './aboutme';
+@import './my-skills';
+
+h2,
+h3 {
+  font: {
+    family: $font-Cinzel;
+  }
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+}
+h2 {
+  font-size: 42px;
+  margin-top: 50px;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 50px;
+}

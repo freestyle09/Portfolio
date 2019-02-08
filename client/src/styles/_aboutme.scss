@@ -2,5 +2,14 @@
 
 // for testing only
 #aboutme {
-  height: 1000px;
+  padding-bottom: 50px;
+  .container {
+    text-align: center;
+    h2 {
+      color: $font-color;
+    }
+    h3 {
+      color: $main-color;
+    }
+  }
 }

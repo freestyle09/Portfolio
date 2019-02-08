@@ -1,0 +1,49 @@
+@import './variables';
+
+#my-skills {
+  position: relative;
+  padding-bottom: 50px;
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('~/cup_of_coffee.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(30%) sepia(0.3);
+    -webkit-filter: brightness(30%) sepia(0.3);
+  }
+  .container {
+    position: relative;
+    z-index: 1030;
+    color: $color-white;
+    h2 {
+      padding-top: 50px;
+    }
+    .icons {
+      font-size: 60px;
+      padding-bottom: 50px;
+      font-family: $font-Cinzel;
+      text-align: center;
+
+      img {
+        height: 50px;
+        width: 100px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        vertical-align: middle;
+      }
+      svg {
+        padding: 20px;
+        height: 110px;
+      }
+      i {
+        padding: 20px;
+      }
+    }
+  }
+}

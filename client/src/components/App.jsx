@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from './Header';
 import AboutMe from './AboutMe';
+import MySkills from './MySkills';
 
 class App extends Component {
   state = {};
@@ -10,6 +11,7 @@ class App extends Component {
       <div>
         <Header />
         <AboutMe />
+        <MySkills />
       </div>
     );
   }
