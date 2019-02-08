@@ -1,0 +1,22 @@
+@import './variables';
+
+#portfolio {
+  .container {
+    .projects {
+      display: flex;
+      margin-bottom: 20px;
+      .project {
+        position: relative;
+        margin-left: 20px;
+        h4 {
+          font-family: $font-Cinzel;
+        }
+        a {
+          position: absolute;
+          bottom: 0;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

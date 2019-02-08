@@ -24,8 +24,8 @@ class MySkills extends Component {
                 <path d='M32.4 67.1c.1 3 2.6 5.4 5.6 5.4h.2c3.1-.1 5.5-2.7 5.4-5.8-.1-3-2.6-5.4-5.6-5.4h-.2c-.2 0-.5 0-.7.1-4.1-6.8-5.8-14.2-5.2-22.2.4-6 2.4-11.2 5.9-15.5 2.9-3.7 8.5-5.5 12.3-5.6 10.6-.2 15.1 13 15.4 18.3 1.3.3 3.5 1 5 1.5-1.2-16.2-11.2-24.6-20.8-24.6-9 0-17.3 6.5-20.6 16.1-4.6 12.8-1.6 25.1 4 34.8-.5.7-.8 1.8-.7 2.9z' />
               </g>
             </svg>
-            <br />
             <i class='devicon-jquery-plain-wordmark' />
+            <br />
             <i class='devicon-sass-original' />
             <i class='devicon-webpack-plain' />
             <i class='devicon-gulp-plain' />
@@ -36,14 +36,17 @@ class MySkills extends Component {
             <i class='devicon-nodejs-plain-wordmark' />
             <i class='devicon-express-original' />
             <i class='devicon-mongodb-plain' />
+            <img src='sql.png' alt='' />
           </div>
           <div className='icons'>
             <h4>Other</h4>
             <i class='devicon-git-plain-wordmark' />
-
+            <img src='unreal-engine.png' alt='' />
+            <img src='unity.png' alt='' />
             <img src='blenderlogowhite.png' alt='' />
             <img src='3ds-max.png' alt='' />
-            {/* <i class='devicon-github-plain-wordmark' /> */}
+            <img src='rest.png' alt='' />
+
             <i class='devicon-apple-original' />
             <i class='devicon-linux-plain' />
             <i class='devicon-windows8-original' />
