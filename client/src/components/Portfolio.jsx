@@ -31,6 +31,13 @@ class Portfolio extends Component {
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis totam, fuga rerum eos perspiciatis et ipsum iste consequatur architecto minima amet velit sunt quam fugit sequi nostrum hic sed. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae sequi mollitia molestias ut? At cupiditate, ipsam consequatur earum nostrum iste, repellendus dolor id quos, ratione error. Cupiditate, doloribus odit?',
       image: 'https://via.placeholder.com/250'
+    },
+    {
+      id: 5,
+      title: 'MMPStudio',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis totam, fuga rerum eos perspiciatis et ipsum iste consequatur architecto minima amet velit sunt quam fugit sequi nostrum hic sed. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae sequi mollitia molestias ut? At cupiditate, ipsam consequatur earum nostrum iste, repellendus dolor id quos, ratione error. Cupiditate, doloribus odit?',
+      image: 'https://via.placeholder.com/250'
     }
   ];
   state = {};
@@ -40,19 +47,26 @@ class Portfolio extends Component {
         <div className='container'>
           <h2>Portfolio</h2>
           <h3>All my projects</h3>
-          {this.projects.map(el => (
-            <div className='projects'>
+        </div>
+        {this.projects.map(el => (
+          <div className='projects'>
+            <div className='container'>
               <img src={el.image} alt='' />
               <div className='project'>
                 <h4>{el.title}</h4>
                 <div>{el.description}</div>
-                <a href={el.github} target='_blank'>
-                  <i class='devicon-github-plain colored' />
-                </a>
+                <div>
+                  <a href={el.github} target='_blank'>
+                    <i class='devicon-github-plain colored' />
+                  </a>
+                  <a href={el.website}>
+                    <i class='fas fa-globe-europe' />
+                  </a>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </section>
     );
   }

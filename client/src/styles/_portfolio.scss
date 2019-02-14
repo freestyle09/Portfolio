@@ -1,20 +1,28 @@
 @import './variables';
 
 #portfolio {
-  .container {
-    .projects {
+  .projects {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    &:nth-child(2n + 2) {
+      background-color: $bg-color;
+    }
+    .container {
       display: flex;
-      margin-bottom: 20px;
+
       .project {
         position: relative;
         margin-left: 20px;
         h4 {
           font-family: $font-Cinzel;
         }
-        a {
+        div:last-of-type {
           position: absolute;
           bottom: 0;
           font-size: 30px;
+          a {
+            padding-right: 10px;
+          }
         }
       }
     }
