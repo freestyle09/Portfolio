@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
 
 class Projects extends Component {
-  state = {};
+  state = {
+    project: null
+  };
   render() {
-    return <div>{this.props.location.project.title}</div>;
+    return <div>{this.state.project && this.state.project.title}</div>;
+  }
+
+  componentDidMount() {
+    console.log(this.props);
+    fetch('/projects' + this.props.location.pathname)
+      .then(resp => resp.json())
+      .then(data =>
+        this.setState({
+          project: data
+        })
+      );
   }
 }
 

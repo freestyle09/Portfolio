@@ -7,8 +7,8 @@ app.use(express.json());
 app.get('/projects', (req, res) => {
   res.send(projects);
 });
-app.get('/projects/:id', async (req, res) => {
-  const project = await projects.find(el => el.id === +req.params.id);
+app.get('/projects/:name', async (req, res) => {
+  const project = await projects.find(el => el.url === req.params.name);
   res.send(project);
 });
 
