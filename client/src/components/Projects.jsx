@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Projects extends Component {
   state = {};
   render() {
-    return <div>Project works</div>;
+    return <div>{this.props.location.project.title}</div>;
   }
 }
 

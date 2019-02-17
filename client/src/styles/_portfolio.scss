@@ -16,9 +16,10 @@
           align-items: center;
           display: flex;
           padding: 10px 0;
-          > a {
+          a {
             color: $font-color;
             transition: 0.3s;
+            cursor: pointer;
             &:hover {
               color: $main-color;
               text-decoration: none;
@@ -27,6 +28,9 @@
           }
           > div {
             font-size: 30px;
+            a {
+              margin-left: 5px;
+            }
           }
         }
       }

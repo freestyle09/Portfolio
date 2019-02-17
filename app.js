@@ -1,10 +1,15 @@
 const express = require('express');
 const app = express();
+const projects = require('./projects');
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello world, server works! :)');
+app.get('/projects', (req, res) => {
+  res.send(projects);
+});
+app.get('/projects/:id', async (req, res) => {
+  const project = await projects.find(el => el.id === +req.params.id);
+  res.send(project);
 });
 
 if (process.env.NODE_ENV === 'production') {
