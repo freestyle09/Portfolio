@@ -71,27 +71,28 @@ class Portfolio extends Component {
           <h2>Portfolio</h2>
           <h3>All my projects</h3>
         </div>
-        {this.projects.map(el => (
-          <div key={el.id} className='projects'>
-            <div className='container'>
-              <img src={el.image} alt='' />
-              <div className='project'>
-                <NavLink to={'/' + el.url}>
-                  <h4>{el.title}</h4>
-                </NavLink>
-                <div>{el.description}</div>
+        <div className='projects'>
+          <div className='container'>
+            {this.projects.map(el => (
+              <div key={el.id} className='project'>
+                <img src={el.image} alt='' />
                 <div>
-                  <a href={el.github} target='_blank'>
-                    <i className='devicon-github-plain colored' />
-                  </a>
-                  <a href={el.website} target='_blank'>
-                    <i className='fas fa-globe-europe' />
-                  </a>
+                  <NavLink to={'/' + el.url}>
+                    <h4>{el.title}</h4>
+                  </NavLink>
+                  <div>
+                    <a href={el.github} target='_blank'>
+                      <i className='devicon-github-plain colored' />
+                    </a>
+                    <a href={el.website} target='_blank'>
+                      <i className='fas fa-globe-europe' />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </section>
     );
   }
