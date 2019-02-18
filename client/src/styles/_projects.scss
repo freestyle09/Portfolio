@@ -1,1 +1,25 @@
 @import './variables';
+
+#projects {
+  .container {
+    position: relative;
+    .description {
+      margin: 50px 0;
+    }
+    .image {
+      margin: 0 auto;
+      width: 60%;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    h4 {
+      margin: 50px 0;
+      font: {
+        family: $font-Cinzel;
+      }
+      text-align: center;
+    }
+  }
+}

@@ -8,18 +8,27 @@ class Projects extends Component {
   render() {
     const project = this.state.project;
     return (
-      <div>
+      <section id='projects'>
         {this.state.project && (
           <div>
-            <SmallMenu />
+            <SmallMenu smallDesc={project.smallDesc} title={project.title} />
             <div className='container'>
-              <h3>{project.title}</h3>
-              <div>{project.description}</div>
-              <img src={project.image} alt='' />
+              <div className='description'>
+                <h4>Project Description</h4>
+                <div>{project.description}</div>
+              </div>
+              <div className='technologies'>
+                <h4>Technologies used in project</h4>
+                <div>{project.technologies}</div>
+              </div>
+              <div className='image'>
+                <h4>Layout</h4>
+                <img src={project.image} alt='' />
+              </div>
             </div>
           </div>
         )}
-      </div>
+      </section>
     );
   }
 

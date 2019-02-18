@@ -8,9 +8,13 @@ class SmallMenu extends Component {
       <section id='menu'>
         <div className='background-image' />
         <div className='container'>
-          <div>
+          <div className='small-menu'>
             <h1>Józef Rzadkosz</h1>
             <Menu />
+          </div>
+          <div className='title'>
+            <h3>{this.props.title}</h3>
+            <h4>{this.props.smallDesc}</h4>
           </div>
         </div>
       </section>

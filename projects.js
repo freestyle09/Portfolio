@@ -2,9 +2,11 @@ module.exports = [
   {
     id: 1,
     title: 'PC Shop',
+    smallDesc: 'Demo of an online store',
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim aspernatur excepturi officia quo porro sapiente laborum illo ad possimus. Animi suscipit cum ea in sed officiis accusamus alias adipisci aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nulla voluptatem odit vel qui eos possimus repudiandae iure! Non, nam unde. Repellat provident dolor repellendus aspernatur? Excepturi minus magnam praesentium.',
     image: 'pc-shop.png',
+    technologies: 'HTML5, CSS3, React.js',
     github: 'https://github.com/freestyle09/Zakopane-Rzadkosz.pl',
     website: 'https://pc-shop-24.com.pl',
     url: 'pc-shop'
