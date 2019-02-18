@@ -1,5 +1,29 @@
 @import './variables';
 
-#menu {
-  background-image: url('~/header_train.jpg');
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  width: 40%;
+  justify-content: space-between;
+  margin-top: 30px;
+  font: {
+    family: $font-Cinzel;
+    size: 18px;
+  }
+  li {
+    a {
+      color: $color-white;
+      transition: 0.3s;
+      padding: 10px;
+      &:hover {
+        text-decoration: none;
+        color: $main-color;
+        transition: 0.3s;
+      }
+    }
+    a.active {
+      color: $main-color;
+    }
+  }
 }

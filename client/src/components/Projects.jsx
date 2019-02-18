@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Menu from './Menu';
+import SmallMenu from './SmallMenu';
 
 class Projects extends Component {
   state = {
@@ -11,7 +11,7 @@ class Projects extends Component {
       <div>
         {this.state.project && (
           <div>
-            <Menu />
+            <SmallMenu />
             <div className='container'>
               <h3>{project.title}</h3>
               <div>{project.description}</div>
