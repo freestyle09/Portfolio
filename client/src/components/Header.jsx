@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
   state = {};
@@ -11,13 +12,19 @@ class Header extends Component {
           <div>An interactive front-end developer with the passion for creativity</div>
           <ul className='menu'>
             <li>
-              <a href='#'>Home</a>
+              <NavLink exact activeClassName='active' to='/'>
+                Home
+              </NavLink>
             </li>
             <li>
-              <a href='#'>Projects</a>
+              <NavLink exact activeClassName='active' to='/other'>
+                Other
+              </NavLink>
             </li>
             <li>
-              <a href='#'>Contact</a>
+              <NavLink exact activeClassName='active' to='/contact'>
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
