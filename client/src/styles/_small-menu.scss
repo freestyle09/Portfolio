@@ -11,8 +11,9 @@
     width: 100%;
     height: 100%;
     background-image: url('~/header_train.jpg');
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
+    background-attachment: fixed;
     filter: brightness(30%) sepia(0.3);
     -webkit-filter: brightness(30%) sepia(0.3);
   }

@@ -4,6 +4,7 @@ import Header from './Header';
 import AboutMe from './AboutMe';
 import MySkills from './MySkills';
 import Portfolio from './Portfolio';
+import Contact from './Contact';
 
 class Home extends Component {
   state = {};
@@ -14,6 +15,7 @@ class Home extends Component {
         <AboutMe />
         <MySkills />
         <Portfolio />
+        <Contact />
       </div>
     );
   }
