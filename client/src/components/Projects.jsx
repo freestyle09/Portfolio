@@ -11,7 +11,8 @@ class Projects extends Component {
       <section id='projects'>
         {this.state.project && (
           <div>
-            <SmallMenu smallDesc={project.smallDesc} title={project.title} />
+            <div className='background-image' />
+            {/* <SmallMenu smallDesc={project.smallDesc} title={project.title} /> */}
             <div className='container'>
               <div className='description'>
                 <h4>Project Description</h4>

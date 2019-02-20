@@ -2,6 +2,7 @@
 
 #contact {
   position: relative;
+  border-top: 5px solid $main-color;
   .background-image {
     position: absolute;
     top: 0;
@@ -17,5 +18,16 @@
 
     filter: brightness(30%) sepia(0.3);
     -webkit-filter: brightness(30%) sepia(0.3);
+  }
+  #footer {
+    position: relative;
+    z-index: 1040;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font: {
+      family: $font-Cinzel;
+    }
   }
 }

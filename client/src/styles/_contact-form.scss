@@ -1,0 +1,68 @@
+@import './variables';
+
+.contact-form {
+  z-index: 1080;
+  position: relative;
+  .container {
+    h2 {
+      color: $color-white;
+      padding: 50px 0;
+    }
+  }
+}
+
+.main {
+  border-top: 3px solid $main-color;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  > div {
+    width: 50%;
+    .form-group {
+      position: relative;
+      .form-control,
+      label {
+        width: 100%;
+      }
+    }
+  }
+
+  .input-bottom-main:focus {
+    border-bottom: 2px solid $main-color !important;
+    box-shadow: none !important;
+  }
+  .input-bottom-validate {
+    border-bottom: 2px solid red !important;
+    box-shadow: none !important;
+  }
+}
+.error {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: red;
+  > div {
+    width: 50%;
+  }
+}
+
+textarea {
+  resize: vertical;
+  width: 100%;
+  max-height: 300px;
+  min-height: 200px;
+}
+.btn-primary {
+  &:hover {
+    background-color: $main-hover;
+  }
+}
+.btn-main {
+  border: none;
+  color: $color-white;
+  background-color: $main-color;
+}

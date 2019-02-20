@@ -1,10 +1,26 @@
 @import './variables';
 
 #projects {
+  position: relative;
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(30%) sepia(0.3);
+    -webkit-filter: brightness(30%) sepia(0.3);
+    background: {
+      image: url('~/header_train.jpg');
+      attachment: fixed;
+      size: cover;
+    }
+  }
   .container {
     position: relative;
+    color: $color-white;
     .description {
-      margin: 50px 0;
+      // margin: 50px 0;
     }
     .image {
       margin: 0 auto;
@@ -15,7 +31,7 @@
       }
     }
     h4 {
-      margin: 50px 0;
+      padding: 50px 0;
       font: {
         family: $font-Cinzel;
       }
