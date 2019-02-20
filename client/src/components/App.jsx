@@ -5,7 +5,6 @@ import Home from './Home';
 import Projects from './Projects';
 import Contact from './Contact';
 import Other from './Other';
-import Footer from './Footer';
 
 class App extends Component {
   state = {};

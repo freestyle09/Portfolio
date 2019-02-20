@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SmallMenu from './SmallMenu';
+import Footer from './Footer';
 
 class Projects extends Component {
   state = {
@@ -12,10 +12,11 @@ class Projects extends Component {
         {this.state.project && (
           <div>
             <div className='background-image' />
-            {/* <SmallMenu smallDesc={project.smallDesc} title={project.title} /> */}
+
             <div className='container'>
+              <h2>{project.title}</h2>
               <div className='description'>
-                <h4>Project Description</h4>
+                {/* <h4>Project Description</h4> */}
                 <div>{project.description}</div>
               </div>
               <div className='technologies'>
@@ -29,6 +30,7 @@ class Projects extends Component {
             </div>
           </div>
         )}
+        <Footer />
       </section>
     );
   }

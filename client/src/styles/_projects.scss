@@ -2,6 +2,7 @@
 
 #projects {
   position: relative;
+  padding-bottom: 50px;
   .background-image {
     position: absolute;
     top: 0;
@@ -19,19 +20,25 @@
   .container {
     position: relative;
     color: $color-white;
-    .description {
-      // margin: 50px 0;
-    }
+    text-align: center;
+
     .image {
       margin: 0 auto;
-      width: 60%;
+      width: 80%;
       img {
         width: 100%;
         object-fit: contain;
       }
     }
-    h4 {
+    h2 {
+      margin: 0;
       padding: 50px 0;
+      font: {
+        size: 50px;
+      }
+    }
+    h4 {
+      padding: 60px 0 20px 0;
       font: {
         family: $font-Cinzel;
       }

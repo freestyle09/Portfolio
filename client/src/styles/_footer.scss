@@ -1,7 +1,8 @@
 @import './variables';
 
 footer {
-  position: relative;
-  height: 500px;
   margin-top: 50px;
+  font: {
+    family: $font-Cinzel;
+  }
 }
