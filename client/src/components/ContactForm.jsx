@@ -11,18 +11,18 @@ export default class ContactForm extends React.Component {
       phone: '',
       message: '',
       from: '',
-      errors: [],
+      errors: null,
       show: false
     };
   }
 
   errors = [];
-  errFirst = 'Pole Imię nie może być puste i musi być dłuższe niż 3 znaki';
-  errSurname = 'Pole Nazwisko nie może być puste i musi być dłuższe niż 3 znaki';
-  errEmail = 'Pole E-mail nie może być puste';
-  errEmailCorrect = 'Adres e-mail musi być poprawny';
-  errPhone = 'Numer telefonu musi zawierać 9 cyfr';
-  errMessage = 'Pole Treść wiadomości nie może być puste i musi być dłuższe niż 10 znaków';
+  errFirst = 'Name is required and must be at least 3 characters long';
+  errSurname = 'Surname is required and must be at least 3 characters long';
+  errEmail = 'E-mail is required';
+  errEmailCorrect = 'E-mail must be valid address';
+  errPhone = 'Phone number must be at least 9 digits long';
+  errMessage = 'Message is required and must be at least 10 characters long';
 
   handleFirstName = e => {
     const firstName = e.target.value;
@@ -120,7 +120,7 @@ export default class ContactForm extends React.Component {
   handlePhone = e => {
     const phone = e.target.value;
     // Validation
-    if (phone.length !== 9) {
+    if (phone.length < 9) {
       if (this.errors.indexOf(this.errPhone) < 0) {
         this.errors.push(this.errPhone);
       }
@@ -255,11 +255,15 @@ export default class ContactForm extends React.Component {
       <div id='contact-form' className='contact-form'>
         <div className='container'>
           <h2>Contact</h2>
-          <div className='error'>
-            {this.state.errors.map((el, index) => (
-              <div key={index}>{el}</div>
-            ))}
-          </div>
+
+          {this.state.errors && (
+            <div className='error'>
+              {this.state.errors.map((el, index) => (
+                <div key={index}>{el}</div>
+              ))}
+            </div>
+          )}
+
           <form className='form' onSubmit={this.sendForm}>
             <input id='type' type='hidden' value={this.props.from} />
             <div>
