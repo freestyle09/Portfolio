@@ -5,7 +5,7 @@ module.exports = [
     isFinished: true,
     shortDesc: 'Demo of an online store',
     description:
-      'PC Shop is an application builded for study only. In this app you can login in into your gmail account and simply order some electronic items. Application was created mostly with Angular and Firebase. In database I have focused only on electronic items realted to Personal Computers, Laptops, Consoles, Games and Softwares. On the top of this app I have created a search bar when you can find products which are currently available. All of products have their own specifications and reviews from clients. After you choose products you can finish your order with filling delivery informations.',
+      'PC Shop is an application builded for study purposes only. In this application you can login in into your gmail account and simply order some electronic items. Application is created mostly with Angular and Firebase. In database I have focused only on electronic items realted to personal computers, laptops, consoles, games and softwares. At the top of this application I have created a search bar where you can find products which are currently available. All of products have their own specifications and reviews from clients. After you choose products you can finish your order with filling delivery information.',
     image: 'pc-shop.png',
     technologies:
       'HTML5, CSS3, Angular, TypeScript, JavaScript, SASS, Font Awesome Angular Material, Bootstrap, Firebase. ',
@@ -19,7 +19,7 @@ module.exports = [
     isFinished: false,
     shortDesc: 'Application for your own cooking recipes',
     description:
-      '"Your recipes" is an application created for people who have their own cooking recipes written on some paper sheets. Inspiration for this application was my wife, she always lost her paper sheets with cooking recipes! Now she can forgot about them and save her cooking recipes on her account. First you need to think what and how much components and steps you will need to prepare a meal, also you can add a timer to turn on alarm when your step is done. Alarm will be ringing until you will not close it. After this you can follow your own written cooking recipe step by step without any mistakes. Noone like to eat a burnt chicken, right?',
+      '"Your recipes" is an application created for people who have their own cooking recipes written on some paper sheets. Inspiration for this application was my wife, she always lost her paper sheets with cooking recipes! Now she can forgot about them and save her cooking recipes on her account. First you need to think what and how much components and steps you will need to prepare a meal. You can also add a timer to turn on alarm when your step is done. Alarm will be ringing until you will not close it. After this you can follow your own written cooking recipe step by step without any mistakes. Noone like to eat a burnt chicken, right?',
     image: 'twoje-przepisy.png',
     technologies:
       'HTML5, CSS3, SASS, React.js, JavaScript ES5 ES6, Redux, Bootstrap, Webpack, REST API, Node.js, Express, MongoDB.',

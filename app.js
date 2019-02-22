@@ -1,16 +1,12 @@
 const express = require('express');
 const app = express();
-const projects = require('./projects');
+const path = require('path');
+const projects = require('./routes/projects');
+const contact = require('./routes/contact');
 
 app.use(express.json());
-
-app.get('/projects', (req, res) => {
-  res.send(projects);
-});
-app.get('/projects/:name', async (req, res) => {
-  const project = await projects.find(el => el.url === req.params.name);
-  res.send(project);
-});
+app.use('/projects', projects);
+app.use('/contact', contact);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));

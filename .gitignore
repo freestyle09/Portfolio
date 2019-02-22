@@ -3,3 +3,4 @@ node_modules
 *.md
 package-lock.json
 .vscode
+keys.js

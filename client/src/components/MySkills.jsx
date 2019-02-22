@@ -8,7 +8,7 @@ class MySkills extends Component {
         <div className='background-image' />
         <div className='container'>
           <h2>My Skills</h2>
-          <h3>what i'm best at</h3>
+          <h3>what i am best at</h3>
           <div className='icons'>
             <h4>Front-End</h4>
             <i className='devicon-html5-plain-wordmark' />
