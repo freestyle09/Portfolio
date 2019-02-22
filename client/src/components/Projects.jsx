@@ -9,14 +9,15 @@ class Projects extends Component {
     const project = this.state.project;
     return (
       <section id='projects'>
-        {this.state.project && (
+        {project && (
           <div>
             <div className='background-image' />
 
             <div className='container'>
               <h2>{project.title}</h2>
+              <h3>{project.shortDesc}</h3>
+              {!project.isFinished && <h3 className='isFinished'>(not finished)</h3>}
               <div className='description'>
-                {/* <h4>Project Description</h4> */}
                 <div>{project.description}</div>
               </div>
               <div className='technologies'>

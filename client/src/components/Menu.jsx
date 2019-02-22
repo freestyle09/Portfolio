@@ -13,12 +13,7 @@ class Menu extends Component {
         </li>
         <li>
           <NavLink exact activeClassName='active' to='/other'>
-            Other
-          </NavLink>
-        </li>
-        <li>
-          <NavLink exact activeClassName='active' to='/contact'>
-            Contact
+            Other Projects
           </NavLink>
         </li>
       </ul>

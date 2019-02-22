@@ -32,17 +32,21 @@
     }
     h2 {
       margin: 0;
-      padding: 50px 0;
+      padding: 60px 0 20px 0;
       font: {
         size: 50px;
       }
     }
+    h3.isFinished {
+      margin-top: -30px;
+    }
+
     h4 {
       padding: 60px 0 20px 0;
+      text-align: center;
       font: {
         family: $font-Cinzel;
       }
-      text-align: center;
     }
   }
 }

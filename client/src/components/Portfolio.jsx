@@ -27,9 +27,11 @@ class Portfolio extends Component {
                       <a href={el.github} target='_blank'>
                         <i className='fab fa-github' />
                       </a>
-                      <a href={el.website} target='_blank'>
-                        <i className='fas fa-globe-europe' />
-                      </a>
+                      {el.website && (
+                        <a href={el.website} target='_blank'>
+                          <i className='fas fa-globe-europe' />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
