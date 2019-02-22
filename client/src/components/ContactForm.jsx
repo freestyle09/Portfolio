@@ -1,5 +1,5 @@
 import React from 'react';
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 export default class ContactForm extends React.Component {
   constructor(props) {
@@ -202,15 +202,9 @@ export default class ContactForm extends React.Component {
       document.getElementById('message').classList.add('input-bottom-validate');
     } else if (this.state.errors.length > 0) {
     } else {
-      // Alert after submiting the form
-
-      swal({
-        title: 'Sukces!',
-        text: 'Wiadomość e-mail została wysłana prawidłowo',
-        type: 'success',
-        confirmButtonText: 'Zamknij'
+      this.setState({
+        isLoading: true
       });
-
       // Make an object and send it
       const obj = {
         from: this.state.from,
@@ -229,7 +223,23 @@ export default class ContactForm extends React.Component {
         body: JSON.stringify(obj)
       })
         .then(resp => resp.json())
-        .then(data => console.log(data));
+        .then(() => {
+          // Alert after submiting the form
+          Swal.fire({
+            title: 'Sukces!',
+            text: 'Wiadomość e-mail została wysłana prawidłowo',
+            type: 'success',
+            confirmButtonText: 'Zamknij'
+          });
+        })
+        .catch(() => {
+          Swal.fire({
+            title: 'Ups...',
+            text: 'Wiadomość e-mail nie została wysłana prawidłowo',
+            type: 'error',
+            confirmButtonText: 'Zamknij'
+          });
+        });
 
       const form = document.querySelector('.form');
       const input = form.querySelectorAll('input:not([type=hidden]), textarea');
@@ -246,7 +256,8 @@ export default class ContactForm extends React.Component {
     }
 
     this.setState({
-      errors: this.errors
+      errors: this.errors,
+      isLoading: false
     });
   };
 

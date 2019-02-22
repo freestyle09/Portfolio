@@ -3,6 +3,7 @@
 #contact {
   position: relative;
   border-top: 5px solid $main-color;
+  z-index: 1;
   .background-image {
     position: absolute;
     top: 0;

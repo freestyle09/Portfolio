@@ -23,7 +23,7 @@ class AboutMe extends Component {
             </p>
             <p>
               I was creating my own projects, and then I thought... There is something missing here... Dynamics! I found
-              informations in web, that for all this stuff responsible is programming language JavaScript. I have
+              informations in web, that for all this stuff responsible is programming language called JavaScript. I have
               started to learn it, and that was when my dreams came true. Creating animations, events, I found pure
               magic again! JavaScript opened my horizons on technologies of Front End world.
             </p>
