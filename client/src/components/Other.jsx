@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
+import Gallery from './Gallery';
 
 class Other extends Component {
   state = {};
@@ -12,6 +13,12 @@ class Other extends Component {
             <h1>Other projects</h1>
             <Menu />
           </div>
+          <div className='text'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eos ullam odio magnam? Eligendi, labore
+            dolores delectus voluptatum corporis rem distinctio non debitis at commodi ullam, incidunt pariatur dolorum
+            rerum?
+          </div>
+          <Gallery />
         </div>
       </section>
     );
