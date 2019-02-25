@@ -2,7 +2,9 @@
 
 footer {
   margin-top: 50px;
-  font: {
-    family: $font-Cinzel;
+  .container {
+    font: {
+      family: $font-Cinzel;
+    }
   }
 }

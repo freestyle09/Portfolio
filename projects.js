@@ -48,7 +48,7 @@ module.exports = [
     shortDesc: 'Website of the Fedro company dealing with renting rooms',
     description:
       'Olczański Dom is a Single Page Application builded for advertisement. You can see offer of company and pictures of rooms which you can rent. You can check currently weather in Zakopane City, Poland, also live view from Mountain called Kasprowy Wierch and famous street in Zakopane City called Krupówki. At the bottom of page you can send an email if you are interested in.',
-    image: 'olczanski-dom.png',
+    image: 'olczanski-dom.jpg',
     technologies:
       'HTML5, CSS3, SASS, React.js JavaScript ES5 ES6, Bootstrap, RWD, Font Awesome, OpenWeather, Webpack, REST API, Node.js, Express, SEO.',
     github: 'https://github.com/freestyle09/Olczanski-dom',
@@ -62,7 +62,7 @@ module.exports = [
     shortDesc: 'Website of company dealing with renting rooms, skiing, transport and conductivity.',
     description:
       'Zdobywcy Tatr is a Single Page Application devided into four different pages. All pages have the same structure, but describe four services which company are dealing with. First page is about conductivity. Second page is about renting apartaments. Third page is about transport. Fourth page is about skiing. On each side you can send an email if you are interested in.',
-    image: 'zdobywcy-tatr.png',
+    image: 'zdobywcy-tatr.jpg',
     technologies:
       'HTML5, CSS3, SASS, React.js JavaScript ES5 ES6, Bootstrap, RWD, Font Awesome, Webpack, REST API, Node.js, Express, SEO.',
     website: 'https://freestyle09.usermd.net/',
