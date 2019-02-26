@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
 import Gallery from './Gallery';
+import Footer from './Footer';
 
 class Other extends Component {
   state = {};
@@ -20,6 +21,7 @@ class Other extends Component {
           </div>
           <Gallery />
         </div>
+        <Footer />
       </section>
     );
   }

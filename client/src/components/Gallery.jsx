@@ -13,7 +13,7 @@ class Gallery extends Component {
   }
 
   componentWillMount() {
-    for (let i = 1; i < 24; i++) {
+    for (let i = 1; i < 28; i++) {
       let obj = {};
 
       obj = {

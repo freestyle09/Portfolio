@@ -1,8 +1,10 @@
 @import './variables';
 
 footer {
-  margin-top: 50px;
+  padding: 50px 0;
   .container {
+    text-align: center;
+    color: $color-white;
     font: {
       family: $font-Cinzel;
     }

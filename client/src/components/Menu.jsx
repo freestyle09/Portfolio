@@ -16,6 +16,11 @@ class Menu extends Component {
             Other Projects
           </NavLink>
         </li>
+        <li>
+          <NavLink exact activeClassName='active' to='/cv/'>
+            CV
+          </NavLink>
+        </li>
       </ul>
     );
   }

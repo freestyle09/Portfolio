@@ -5,6 +5,7 @@ import Home from './Home';
 import Projects from './Projects';
 import Contact from './Contact';
 import Other from './Other';
+import Cv from './Cv';
 
 class App extends Component {
   state = {};
@@ -17,6 +18,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/other' component={Other} />
+            <Route exact path='/cv' component={Cv} />
             <Route exact path='/:name' component={Projects} />
             <Redirect from='*' to='/' />
           </Switch>
