@@ -252,11 +252,11 @@ export default class ContactForm extends React.Component {
         el.value = '';
       }
       this.setState({
-        firstName: (this.state.firstName = ''),
-        surname: (this.state.surname = ''),
-        email: (this.state.email = ''),
-        phone: (this.state.phone = ''),
-        message: (this.state.message = '')
+        firstName: '',
+        surname: '',
+        email: '',
+        phone: '',
+        message: ''
       });
     }
     this.setState({

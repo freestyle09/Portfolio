@@ -19,7 +19,7 @@ class Gallery extends Component {
       obj = {
         id: i,
         url: `${i}.jpg`,
-        tb: `${i}.jpg`
+        tb: `thumb/${i}.jpg`
       };
 
       this.images.push(obj);

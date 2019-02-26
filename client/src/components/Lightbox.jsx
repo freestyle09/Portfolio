@@ -94,7 +94,7 @@ export default class Lightbox extends React.Component {
         </div>
 
         {/*Context Menu*/}
-        <div className='contextmenu'>This photo is &copy; by Olczański Dom.</div>
+        <div className='contextmenu'>This photo is &copy; by Józef Rzadkosz.</div>
       </div>
     );
   }
