@@ -37,12 +37,12 @@ class Cv extends Component {
               </a>
             </div>
             {this.state.language === 'pl' && (
-              <a className='download' href='/cv_pl.pdf' download='JózefRzadkosz_cv_pl'>
+              <a className='download' href='/cv_pl.pdf' download='Józef_Rzadkosz_cv_pl'>
                 <i className='fas fa-file-download' />
               </a>
             )}
             {this.state.language === 'en' && (
-              <a className='download' href='/header_train.jpg' download='JózefRzadkosz_cv_en'>
+              <a className='download' href='/cv_en.pdf' download='Józef_Rzadkosz_cv_en'>
                 <i className='fas fa-file-download' />
               </a>
             )}
@@ -52,7 +52,11 @@ class Cv extends Component {
               <img src='/cv_pl.png' alt='' />
             </div>
           )}
-          {this.state.language === 'en' && <div>English</div>}
+          {this.state.language === 'en' && (
+            <div className='cv'>
+              <img src='/cv_en.png' alt='' />
+            </div>
+          )}
         </div>
         <Footer />
       </section>
