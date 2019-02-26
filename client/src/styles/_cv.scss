@@ -31,8 +31,23 @@
       align-items: center;
       margin-bottom: 50px;
       .language {
+        padding-right: 5px;
         cursor: pointer;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        transition: 0.3s;
+        &:hover {
+          filter: grayscale(0);
+          -webkit-filter: grayscale(0);
+          transition: 0.3s;
+        }
+        &-active {
+          filter: grayscale(0);
+          -webkit-filter: grayscale(0);
+          transition: 0.3s;
+        }
       }
+
       .download {
         text-decoration: none;
         color: $color-white;

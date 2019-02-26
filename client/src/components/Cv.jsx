@@ -18,15 +18,21 @@ class Cv extends Component {
         <div className='background-image' />
         <div className='container'>
           <div className='flex'>
-            <h1>cv</h1>
+            <h1>curriculum vitae</h1>
             <Menu />
           </div>
           <div className='languages'>
             <div>
-              <a className='language' onClick={() => this.changeLanguage('en')}>
+              <a
+                className={this.state.language === 'en' ? 'language language-active' : 'language'}
+                onClick={() => this.changeLanguage('en')}
+              >
                 <img src='/united-kingdom.png' alt='' />
               </a>
-              <a className='language' onClick={() => this.changeLanguage('pl')}>
+              <a
+                className={this.state.language === 'pl' ? 'language language-active' : 'language'}
+                onClick={() => this.changeLanguage('pl')}
+              >
                 <img src='/poland.png' alt='' />
               </a>
             </div>
