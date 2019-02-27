@@ -15,12 +15,20 @@ class Gallery extends Component {
   componentWillMount() {
     for (let i = 1; i < 28; i++) {
       let obj = {};
-
-      obj = {
-        id: i,
-        url: `${i}.jpg`,
-        tb: `thumb/${i}.jpg`
-      };
+      if (i === 6 || i === 7 || i === 8 || i === 9) {
+        obj = {
+          id: i,
+          class: 'vertical',
+          url: `${i}.jpg`,
+          tb: `thumb/${i}.jpg`
+        };
+      } else {
+        obj = {
+          id: i,
+          url: `${i}.jpg`,
+          tb: `thumb/${i}.jpg`
+        };
+      }
 
       this.images.push(obj);
     }
