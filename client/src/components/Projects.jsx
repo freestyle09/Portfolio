@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
+import Menu from './Menu';
 
 class Projects extends Component {
   state = {
@@ -14,9 +15,13 @@ class Projects extends Component {
             <div className='background-image' />
 
             <div className='container'>
-              <h2>{project.title}</h2>
-              <h3>{project.shortDesc}</h3>
-              {!project.isFinished && <h3 className='isFinished'>(not finished)</h3>}
+              <div className='helper'>
+                <h2>{project.title}</h2>
+                <h3>{project.shortDesc}</h3>
+                {!project.isFinished && <h3 className='isFinished'>(not finished)</h3>}
+                <Menu />
+              </div>
+
               <div className='description'>
                 <div>{project.description}</div>
               </div>
