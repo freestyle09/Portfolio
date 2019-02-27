@@ -18,6 +18,16 @@ class Projects extends Component {
               <div className='helper'>
                 <h2>{project.title}</h2>
                 <h3>{project.shortDesc}</h3>
+                <div>
+                  <a href={project.github} target='_blank'>
+                    <i className='fab fa-github' />
+                  </a>
+                  {project.website && (
+                    <a href={project.website} target='_blank'>
+                      <i className='fas fa-globe-europe' />
+                    </a>
+                  )}
+                </div>
                 {!project.isFinished && <h3 className='isFinished'>(not finished)</h3>}
                 <Menu />
               </div>

@@ -26,16 +26,6 @@ class Portfolio extends Component {
                     <NavLink to={'/' + el.url}>
                       <h4>{el.title}</h4>
                     </NavLink>
-                    {/* <div>
-                      <a href={el.github} target='_blank'>
-                        <i className='fab fa-github' />
-                      </a>
-                      {el.website && (
-                        <a href={el.website} target='_blank'>
-                          <i className='fas fa-globe-europe' />
-                        </a>
-                      )}
-                    </div> */}
                   </div>
                 </div>
               ))}
