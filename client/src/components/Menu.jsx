@@ -1,8 +1,37 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink, Redirect } from 'react-router-dom';
 
 class Menu extends Component {
   state = {};
+
+  goTo = selector => {
+    if (window.location.pathname !== '/') {
+      this.constructor.changeUrl();
+    }
+    let checkExist = setInterval(() => {
+      let element = document.getElementById(selector);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        clearInterval(checkExist);
+      }
+    }, 100);
+  };
+
+  static changeUrl() {
+    return <Redirect to='/' />;
+  }
+
+  goToPortfolio = () => {
+    this.goTo('portfolio');
+  };
+
+  goToContact = () => {
+    this.goTo('contact');
+  };
+
   render() {
     return (
       <ul className='menu'>
@@ -10,6 +39,16 @@ class Menu extends Component {
           <NavLink exact activeClassName='active' to='/'>
             Home
           </NavLink>
+        </li>
+        <li>
+          <Link to='/' onClick={this.goToPortfolio}>
+            Portfolio
+          </Link>
+        </li>
+        <li>
+          <Link to='/' onClick={this.goToContact}>
+            Contact
+          </Link>
         </li>
         <li>
           <NavLink exact activeClassName='active' to='/other/'>
@@ -23,6 +62,9 @@ class Menu extends Component {
         </li>
       </ul>
     );
+  }
+  componentDidMount() {
+    console.log(window.location.pathname);
   }
 }
 
