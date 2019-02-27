@@ -15,9 +15,12 @@ class Other extends Component {
             <Menu />
           </div>
           <div className='text'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eos ullam odio magnam? Eligendi, labore
-            dolores delectus voluptatum corporis rem distinctio non debitis at commodi ullam, incidunt pariatur dolorum
-            rerum?
+            In the meantime while I was learning programming I was trying to create simply 3D model of my brothers
+            house. From house project I have created model in Blender and later I have moved this model into game engine
+            Unreal Engine 4. In this game I wanted to take a person on a journey around the house. This person could
+            walk around the house and simply go sightseeing. This project is not finished yet but I want to end it
+            someday and improve my modeling, game desing skills in those technologies. Some of models are made for study
+            only.
           </div>
           <Gallery />
         </div>
