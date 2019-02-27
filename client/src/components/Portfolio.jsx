@@ -18,12 +18,15 @@ class Portfolio extends Component {
             {this.state.projects &&
               this.state.projects.map(el => (
                 <div key={el.id} className='project'>
-                  <img src={el.image} alt='' />
                   <div>
+                    <NavLink to={'/' + el.url}>
+                      <img src={el.image} alt='' />
+                    </NavLink>
+
                     <NavLink to={'/' + el.url}>
                       <h4>{el.title}</h4>
                     </NavLink>
-                    <div>
+                    {/* <div>
                       <a href={el.github} target='_blank'>
                         <i className='fab fa-github' />
                       </a>
@@ -32,7 +35,7 @@ class Portfolio extends Component {
                           <i className='fas fa-globe-europe' />
                         </a>
                       )}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}

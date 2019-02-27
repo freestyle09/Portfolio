@@ -33,17 +33,17 @@
       .language {
         padding-right: 5px;
         cursor: pointer;
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
+        filter: brightness(50%);
+        -webkit-filter: brightness(50%);
         transition: 0.3s;
         &:hover {
-          filter: grayscale(0);
-          -webkit-filter: grayscale(0);
+          filter: brightness(100%);
+          -webkit-filter: brightness(100%);
           transition: 0.3s;
         }
         &-active {
-          filter: grayscale(0);
-          -webkit-filter: grayscale(0);
+          filter: brightness(100%);
+          -webkit-filter: brightness(100%);
           transition: 0.3s;
         }
       }
