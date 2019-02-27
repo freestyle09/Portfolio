@@ -9,7 +9,7 @@ module.exports = [
     image: 'pc-shop.png',
     technologies:
       'HTML5, CSS3, Angular, TypeScript, JavaScript, SASS, Font Awesome Angular Material, Bootstrap, Firebase. ',
-    github: 'https://github.com/freestyle09/Zakopane-Rzadkosz.pl',
+    github: 'https://github.com/freestyle09/PC-Shop',
     website: 'https://pc-shop-24.com.pl',
     url: 'pc-shop'
   },
@@ -24,7 +24,7 @@ module.exports = [
     technologies:
       'HTML5, CSS3, SASS, React.js, JavaScript ES5 ES6, Redux, Bootstrap, Webpack, REST API, Node.js, Express, MongoDB.',
     github: 'https://github.com/freestyle09/twoje-przepisy',
-    website: 'https://pc-shop-24.com.pl',
+    website: false,
     url: 'twoje-przepisy'
   },
   {
@@ -106,6 +106,7 @@ module.exports = [
     image: 'sitting.png',
     technologies: 'HTML5, CSS3, SASS, JavaScript ES5 ES6, Webpack, RWD, Gulp.',
     github: 'https://github.com/freestyle09/sitting-on-chair',
+    website: false,
     url: 'sit-on-chair'
   }
 ];
