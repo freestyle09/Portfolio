@@ -58,9 +58,10 @@ header {
 }
 
 // Media queries
-@media only screen and (max-height: 500px) {
+@media only screen and (max-height: 414px) {
   header {
-    height: 500px;
+    height: 414px;
+
     .container {
       #arrow {
         bottom: 2%;
@@ -80,6 +81,9 @@ header {
 }
 @media only screen and (max-width: 991px) {
   header {
+    .background-image {
+      background-attachment: inherit;
+    }
     .container {
       padding: 0;
       max-width: 100%;
