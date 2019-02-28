@@ -26,26 +26,46 @@ class Menu extends Component {
 
   goToPortfolio = () => {
     this.goTo('portfolio');
+    this.closeMenu();
   };
 
   goToContact = () => {
     this.goTo('contact');
+    this.closeMenu();
   };
 
   showMenu = () => {
+    this.clickable.current.classList.add('clickable');
     this.menu.current.classList.toggle('menu-active');
     this.button.current.classList.toggle('menu-button-active');
   };
 
+  goToTop = () => {
+    this.closeMenu();
+    document.body.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
+  closeMenu = () => {
+    if (this.menu.current.classList.contains('menu-active')) {
+      this.clickable.current.classList.remove('clickable');
+      this.menu.current.classList.remove('menu-active');
+      this.button.current.classList.remove('menu-button-active');
+    }
+  };
+
   menu = React.createRef();
   button = React.createRef();
+  clickable = React.createRef();
 
   render() {
     return (
       <React.Fragment>
         <ul className='menu' ref={this.menu}>
           <li>
-            <NavLink exact activeClassName='active' to='/'>
+            <NavLink onClick={this.goToTop} exact activeClassName='active' to='/'>
               Home
             </NavLink>
           </li>
@@ -73,6 +93,7 @@ class Menu extends Component {
         <button onClick={this.showMenu} ref={this.button} className='menu-button'>
           Menu
         </button>
+        <div ref={this.clickable} onClick={this.closeMenu} />
       </React.Fragment>
     );
   }

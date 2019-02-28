@@ -31,6 +31,9 @@
 .menu-button {
   display: none;
 }
+.clickable {
+  display: none;
+}
 
 @media only screen and (max-width: 768px) {
   .menu {
@@ -46,7 +49,7 @@
     overflow: hidden;
     margin-top: 0 !important;
     transition: 0.3s width ease-in-out;
-    z-index: 9999;
+    z-index: 9999 !important;
     > li {
       width: auto;
       a {
@@ -72,5 +75,13 @@
   .menu-active {
     width: 200px !important;
     transition: 0.3s width ease-in-out;
+  }
+
+  .clickable {
+    position: fixed;
+    display: flex;
+    z-index: 9998;
+    width: 100vw;
+    height: 100vh;
   }
 }
