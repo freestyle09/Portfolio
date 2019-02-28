@@ -50,6 +50,9 @@
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
   #other {
+    .background-image {
+      background-attachment: initial;
+    }
     .container {
       max-width: 100%;
       .other-menu {
@@ -72,6 +75,9 @@
 
 @media only screen and (max-width: 768px) {
   #other {
+    .background-image {
+      background-attachment: initial;
+    }
     .container {
       max-width: 100%;
       .other-menu {

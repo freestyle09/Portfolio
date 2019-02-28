@@ -85,7 +85,7 @@ header {
 @media only screen and (max-width: 991px) and (min-width: 769px) {
   header {
     .background-image {
-      background-attachment: inherit;
+      background-attachment: initial;
     }
     .container {
       max-width: 100%;
@@ -109,6 +109,9 @@ header {
 
 @media only screen and (max-width: 768px) {
   header {
+    .background-image {
+      background-attachment: initial;
+    }
     .container {
       max-width: 100%;
       h1 {

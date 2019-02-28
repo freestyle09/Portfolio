@@ -65,7 +65,7 @@
 @media only screen and (max-width: 991px) {
   #my-skills {
     .background-image {
-      background-attachment: inherit;
+      background-attachment: initial;
     }
     .container {
       br {
@@ -78,7 +78,7 @@
 @media only screen and (max-width: 768px) {
   #my-skills {
     .background-image {
-      background-attachment: inherit;
+      background-attachment: initial;
     }
     .container {
       max-width: 100%;
