@@ -50,13 +50,17 @@ class Cv extends Component {
           {this.state.language === 'pl' && (
             <div className='cv'>
               <h3>(Preview only)</h3>
-              <img src='/cv_pl.png' alt='' />
+              <div>
+                <img src='/cv_pl.png' alt='' />
+              </div>
             </div>
           )}
           {this.state.language === 'en' && (
             <div className='cv'>
               <h3>(Preview only)</h3>
-              <img src='/cv_en.png' alt='' />
+              <div>
+                <img src='/cv_en.png' alt='' />
+              </div>
             </div>
           )}
         </div>
