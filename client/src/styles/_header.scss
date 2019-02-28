@@ -82,6 +82,7 @@ header {
   header {
     .container {
       padding: 0;
+      max-width: 100%;
 
       h1 {
         font-size: 78px;
@@ -91,9 +92,7 @@ header {
       }
       ul.menu {
         width: 100%;
-        > li {
-          font-size: 15px;
-        }
+        font-size: 16px;
       }
       #arrow {
         bottom: 7%;

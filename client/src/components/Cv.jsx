@@ -18,7 +18,7 @@ class Cv extends Component {
         <div className='background-image' />
         <div className='container'>
           <div className='flex'>
-            <h1>curriculum vitae</h1>
+            <h1>Cv</h1>
             <Menu />
           </div>
           <div className='languages'>
