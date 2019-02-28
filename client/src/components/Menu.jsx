@@ -63,9 +63,6 @@ class Menu extends Component {
       </ul>
     );
   }
-  componentDidMount() {
-    console.log(window.location.pathname);
-  }
 }
 
 export default Menu;
