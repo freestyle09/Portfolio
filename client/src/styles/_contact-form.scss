@@ -103,3 +103,18 @@ textarea {
     }
   }
 }
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+  .form {
+    > div {
+      width: 80%;
+    }
+  }
+  .error {
+    > div {
+      width: 80%;
+    }
+  }
+}
