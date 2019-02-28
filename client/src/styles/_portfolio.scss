@@ -74,3 +74,18 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  #portfolio {
+    .projects {
+      position: relative;
+      .container {
+        margin: 0;
+        max-width: 100%;
+        .project {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
