@@ -1,21 +1,73 @@
 @import './variables';
-
 #arrow {
-  height: 75px;
-  width: 75px;
-  background-color: $main-color-rgba;
-  border-radius: 100%;
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: 0.3s;
+}
+.arrow {
+  cursor: pointer;
+  height: 120px;
+  position: absolute;
+  transition: transform 0.1s;
+  bottom: 10%;
+  width: 40px;
+  transform: rotate(90deg);
+  $transition-time: 0.15s;
 
-  &:hover {
-    cursor: pointer;
-    background-color: $main-color;
-    opacity: 1;
+  &-top,
+  &-bottom {
+    background-color: $color-white;
+    height: 4px;
+    left: -5px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
+    &:after {
+      background-color: $main-color;
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transition: all $transition-time;
+    }
   }
-  i {
-    font-size: 35px;
+
+  &-top {
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+
+    &:after {
+      left: 100%;
+      right: 0;
+      transition-delay: 0s;
+    }
+  }
+
+  &-bottom {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+
+    &:after {
+      left: 0;
+      right: 100%;
+      transition-delay: $transition-time;
+    }
+  }
+
+  &:hover & {
+    &-top:after {
+      left: 0;
+      transition-delay: $transition-time;
+    }
+
+    &-bottom:after {
+      right: 0;
+      transition-delay: 0s;
+    }
+  }
+
+  &:active {
+    transform: scale(0.9) rotate(90deg);
   }
 }

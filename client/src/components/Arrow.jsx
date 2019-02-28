@@ -10,8 +10,9 @@ class Arrow extends Component {
   render() {
     return (
       <div onClick={this.seeMore} id='arrow'>
-        <div>
-          <i className='fas fa-arrow-down' />
+        <div className='arrow'>
+          <div className='arrow-top' />
+          <div className='arrow-bottom' />
         </div>
       </div>
     );
@@ -19,7 +20,6 @@ class Arrow extends Component {
 
   componentDidMount() {
     this.aboutme = document.getElementById('aboutme');
-    console.log(this.aboutme);
   }
 }
 

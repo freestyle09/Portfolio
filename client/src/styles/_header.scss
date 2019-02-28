@@ -44,12 +44,15 @@ header {
     }
     ul.menu {
       margin-top: 40px;
-      width: 70%;
+      width: 80%;
       text-align: center;
+      > li {
+        width: 20%;
+      }
     }
     #arrow {
       position: absolute;
-      bottom: 15%;
+      bottom: 10%;
     }
   }
 }
