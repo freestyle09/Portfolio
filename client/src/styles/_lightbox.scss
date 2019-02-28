@@ -14,9 +14,9 @@
 .grid-gallery {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: 250px;
-  grid-auto-rows: 250px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-rows: 240px;
+  grid-auto-rows: 240px;
   grid-auto-flow: dense;
 }
 

@@ -69,3 +69,26 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  #other {
+    .container {
+      max-width: 100%;
+      .other-menu {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #other {
+    .container {
+      .other-menu {
+        h1 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
