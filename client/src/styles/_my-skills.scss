@@ -51,10 +51,16 @@
 
 @media only screen and (max-width: 991px) {
   #my-skills {
+    .background-image {
+      background-attachment: inherit;
+    }
     .container {
       br {
         display: none;
       }
     }
   }
+}
+
+@media only screen and (max-width: 768px) {
 }

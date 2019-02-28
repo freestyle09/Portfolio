@@ -35,7 +35,7 @@ class Menu extends Component {
   };
 
   showMenu = () => {
-    this.clickable.current.classList.add('clickable');
+    this.clickable.current.classList.toggle('clickable');
     this.menu.current.classList.toggle('menu-active');
     this.button.current.classList.toggle('menu-button-active');
   };
@@ -97,7 +97,7 @@ class Menu extends Component {
           </li>
         </ul>
         <button onClick={this.showMenu} ref={this.button} className='menu-button'>
-          Menu
+          <i class='fas fa-bars' />
         </button>
         <div ref={this.clickable} onClick={this.closeMenu} />
       </React.Fragment>
