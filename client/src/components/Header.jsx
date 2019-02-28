@@ -4,6 +4,7 @@ import Arrow from './Arrow';
 
 class Header extends Component {
   state = {};
+
   render() {
     return (
       <header>

@@ -60,22 +60,28 @@ class Menu extends Component {
   button = React.createRef();
   clickable = React.createRef();
 
+  portfolio;
+  contact;
+  homeLink;
+  portfolioLink;
+  contactLink;
+
   render() {
     return (
       <React.Fragment>
         <ul className='menu' ref={this.menu}>
           <li>
-            <NavLink onClick={this.goToTop} exact activeClassName='active' to='/'>
+            <NavLink id='home-link' onClick={this.goToTop} exact activeClassName='active' to='/'>
               Home
             </NavLink>
           </li>
           <li>
-            <Link to='/' onClick={this.goToPortfolio}>
+            <Link id='portfolio-link' to='/' onClick={this.goToPortfolio}>
               Portfolio
             </Link>
           </li>
           <li>
-            <Link to='/' onClick={this.goToContact}>
+            <Link id='contact-link' to='/' onClick={this.goToContact}>
               Contact
             </Link>
           </li>
@@ -96,6 +102,33 @@ class Menu extends Component {
         <div ref={this.clickable} onClick={this.closeMenu} />
       </React.Fragment>
     );
+  }
+  scroll = () => {
+    if (window.location.pathname === '/' && this.portfolio) {
+      if (window.scrollY < this.portfolio.offsetTop - 200) {
+        this.homeLink.classList.add('active');
+        this.portfolioLink.classList.remove('active');
+        this.contactLink.classList.remove('active');
+      } else if (window.scrollY > this.portfolio.offsetTop - 200 && window.scrollY < this.contact.offsetTop - 200) {
+        this.homeLink.classList.remove('active');
+        this.portfolioLink.classList.add('active');
+        this.contactLink.classList.remove('active');
+      } else {
+        this.homeLink.classList.remove('active');
+        this.portfolioLink.classList.remove('active');
+        this.contactLink.classList.add('active');
+      }
+    }
+  };
+  componentDidMount() {
+    this.portfolio = document.getElementById('portfolio');
+    this.contact = document.getElementById('contact');
+    this.portfolioLink = document.getElementById('portfolio-link');
+    this.contactLink = document.getElementById('contact-link');
+    this.homeLink = document.getElementById('home-link');
+    if (window.innerWidth < 768) {
+      window.addEventListener('scroll', this.scroll);
+    }
   }
 }
 

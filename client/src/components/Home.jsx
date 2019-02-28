@@ -8,6 +8,7 @@ import Contact from './Contact';
 
 class Home extends Component {
   state = {};
+
   render() {
     return (
       <div>

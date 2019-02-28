@@ -45,16 +45,19 @@
     top: 0;
     left: 0;
     width: 0px !important;
+    height: 100vh;
     text-align: left !important;
     overflow: hidden;
     margin-top: 0 !important;
-    transition: 0.3s width ease-in-out;
     z-index: 9999 !important;
     > li {
-      width: auto;
+      width: 100% !important;
       a {
+        display: inline-block;
+        width: 100%;
         color: $font-color;
         font-size: 18px;
+        white-space: nowrap;
       }
     }
   }
@@ -64,7 +67,6 @@
     top: 10px;
     left: 10px;
     cursor: pointer;
-    transition: 0.3s left ease-in-out;
     z-index: 9999;
     &-active {
       left: 210px;
