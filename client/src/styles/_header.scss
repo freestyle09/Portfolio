@@ -44,7 +44,7 @@ header {
     }
     ul.menu {
       margin-top: 40px;
-      width: 80%;
+      width: 100%;
       text-align: center;
       > li {
         width: 20%;
@@ -53,6 +53,40 @@ header {
     #arrow {
       position: absolute;
       bottom: 10%;
+    }
+  }
+}
+
+// Media queries
+@media only screen and (min-width: 1200px) {
+  header {
+    .container {
+      ul.menu {
+        width: 80%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  header {
+    .container {
+      padding: 0;
+
+      h1 {
+        font-size: 78px;
+      }
+      div {
+        font-size: 18px;
+      }
+      ul.menu {
+        width: 100%;
+        > li {
+          font-size: 15px;
+        }
+      }
+      #arrow {
+        bottom: 7%;
+      }
     }
   }
 }
