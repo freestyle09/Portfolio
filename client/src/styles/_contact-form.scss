@@ -1,12 +1,12 @@
 @import './variables';
 
 .contact-form {
-  z-index: 1080;
-  position: relative;
   .container {
     h2 {
+      position: relative;
       color: $color-white;
       padding: 50px 0;
+      z-index: 0;
     }
   }
 }
@@ -83,6 +83,8 @@ textarea {
   }
 }
 .btn-main {
+  position: relative;
+  z-index: 0;
   border: none;
   color: $color-white;
   background-color: $main-color;

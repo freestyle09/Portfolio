@@ -57,6 +57,8 @@ header {
   }
 }
 
+// Media queries
+
 @media only screen and (min-width: 1201px) {
   header {
     .container {
@@ -80,7 +82,7 @@ header {
   }
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) and (min-width: 769px) {
   header {
     .background-image {
       background-attachment: inherit;
@@ -105,7 +107,19 @@ header {
   }
 }
 
-// Media queries
+@media only screen and (max-width: 768px) {
+  header {
+    .container {
+      h1 {
+        font-size: 50px;
+      }
+      div {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-height: 414px) {
   header {
     height: 100vh;

@@ -32,35 +32,48 @@ class Menu extends Component {
     this.goTo('contact');
   };
 
+  showMenu = () => {
+    this.menu.current.classList.toggle('menu-active');
+    this.button.current.classList.toggle('menu-button-active');
+  };
+
+  menu = React.createRef();
+  button = React.createRef();
+
   render() {
     return (
-      <ul className='menu'>
-        <li>
-          <NavLink exact activeClassName='active' to='/'>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <Link to='/' onClick={this.goToPortfolio}>
-            Portfolio
-          </Link>
-        </li>
-        <li>
-          <Link to='/' onClick={this.goToContact}>
-            Contact
-          </Link>
-        </li>
-        <li>
-          <NavLink exact activeClassName='active' to='/other/'>
-            Other Projects
-          </NavLink>
-        </li>
-        <li>
-          <NavLink exact activeClassName='active' to='/cv/'>
-            CV
-          </NavLink>
-        </li>
-      </ul>
+      <React.Fragment>
+        <ul className='menu' ref={this.menu}>
+          <li>
+            <NavLink exact activeClassName='active' to='/'>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <Link to='/' onClick={this.goToPortfolio}>
+              Portfolio
+            </Link>
+          </li>
+          <li>
+            <Link to='/' onClick={this.goToContact}>
+              Contact
+            </Link>
+          </li>
+          <li>
+            <NavLink exact activeClassName='active' to='/other/'>
+              Other Projects
+            </NavLink>
+          </li>
+          <li>
+            <NavLink exact activeClassName='active' to='/cv/'>
+              CV
+            </NavLink>
+          </li>
+        </ul>
+        <button onClick={this.showMenu} ref={this.button} className='menu-button'>
+          Menu
+        </button>
+      </React.Fragment>
     );
   }
 }

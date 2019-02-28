@@ -28,3 +28,49 @@
     }
   }
 }
+.menu-button {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $color-white;
+    top: 0;
+    left: 0;
+    width: 0px !important;
+    text-align: left !important;
+    overflow: hidden;
+    margin-top: 0 !important;
+    transition: 0.3s width ease-in-out;
+    z-index: 9999;
+    > li {
+      width: auto;
+      a {
+        color: $font-color;
+        font-size: 18px;
+      }
+    }
+  }
+  .menu-button {
+    position: fixed;
+    display: flex;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    transition: 0.3s left ease-in-out;
+    z-index: 9999;
+    &-active {
+      left: 210px;
+      transition: 0.3s left ease-in-out;
+    }
+  }
+
+  .menu-active {
+    width: 200px !important;
+    transition: 0.3s width ease-in-out;
+  }
+}
