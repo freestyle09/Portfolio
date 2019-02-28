@@ -86,12 +86,12 @@ class Menu extends Component {
             </Link>
           </li>
           <li>
-            <NavLink exact activeClassName='active' to='/other/'>
+            <NavLink onClick={this.goToTop} exact activeClassName='active' to='/other/'>
               Other Projects
             </NavLink>
           </li>
           <li>
-            <NavLink exact activeClassName='active' to='/cv/'>
+            <NavLink onClick={this.goToTop} exact activeClassName='active' to='/cv/'>
               CV
             </NavLink>
           </li>
