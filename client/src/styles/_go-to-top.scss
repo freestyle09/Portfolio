@@ -20,8 +20,8 @@
   height: 40px;
   width: 40px;
   font-size: 45px;
-  border-radius: 50%;
-  transition: 0.5s opacity;
+  border-radius: 100%;
+  transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
   background-color: $color-white;
   color: $main-color;
   z-index: 1070;
@@ -33,6 +33,8 @@
   }
   &:hover {
     cursor: pointer;
-    transition: 0.25s;
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    background-color: $main-color;
+    color: $color-white;
   }
 }
