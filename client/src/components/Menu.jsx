@@ -105,11 +105,13 @@ class Menu extends Component {
   }
   scroll = () => {
     if (window.location.pathname === '/' && this.portfolio) {
-      if (window.scrollY < this.portfolio.offsetTop - 200) {
+      let portfolioPosition = this.portfolio.offsetTop - 200;
+      let contactPosition = this.contact.offsetTop - 200;
+      if (window.scrollY < portfolioPosition) {
         this.homeLink.classList.add('active');
         this.portfolioLink.classList.remove('active');
         this.contactLink.classList.remove('active');
-      } else if (window.scrollY > this.portfolio.offsetTop - 200 && window.scrollY < this.contact.offsetTop - 200) {
+      } else if (window.scrollY > portfolioPosition && window.scrollY < contactPosition - 200) {
         this.homeLink.classList.remove('active');
         this.portfolioLink.classList.add('active');
         this.contactLink.classList.remove('active');
@@ -129,6 +131,9 @@ class Menu extends Component {
     if (window.innerWidth < 768) {
       window.addEventListener('scroll', this.scroll);
     }
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.scroll);
   }
 }
 
