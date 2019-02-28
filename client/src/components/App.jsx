@@ -6,6 +6,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Other from './Other';
 import Cv from './Cv';
+import GoToTop from './GoToTop';
 
 class App extends Component {
   state = {};
@@ -22,6 +23,7 @@ class App extends Component {
             <Route exact path='/:name' component={Projects} />
             <Redirect from='*' to='/' />
           </Switch>
+          <GoToTop />
         </div>
       </Router>
     );

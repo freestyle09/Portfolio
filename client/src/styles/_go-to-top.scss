@@ -1,0 +1,38 @@
+@import './variables';
+
+.no-display {
+  position: fixed;
+  bottom: -100px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fas {
+  text-shadow: none;
+}
+
+.go-to-top {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  height: 40px;
+  width: 40px;
+  font-size: 45px;
+  border-radius: 50%;
+  transition: 0.5s opacity;
+  background-color: $color-white;
+  color: $main-color;
+  z-index: 1070;
+  i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-5%, -5%);
+  }
+  &:hover {
+    cursor: pointer;
+    transition: 0.25s;
+  }
+}
