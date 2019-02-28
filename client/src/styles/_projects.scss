@@ -102,3 +102,34 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  #projects {
+    .container {
+      max-width: 100%;
+      .helper {
+        > div a {
+          margin: 0;
+        }
+        h3.isFinished {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #projects {
+    .container {
+      .helper {
+        h2 {
+          font-size: 40px;
+        }
+        h3 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
