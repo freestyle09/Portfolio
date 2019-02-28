@@ -92,16 +92,12 @@
 @media only screen and (max-width: 991px) and (min-width: 768px) {
   #projects {
     .container {
-      padding: 0;
       max-width: 100%;
       .helper {
         ul.menu {
           width: 100%;
-          font-size: 16px;
+          font-size: 15px;
         }
-      }
-      .image {
-        width: 95%;
       }
     }
   }

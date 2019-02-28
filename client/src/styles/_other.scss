@@ -39,7 +39,6 @@
 @media only screen and (max-width: 1200px) {
   #other {
     .container {
-      max-width: 100%;
       .other-menu {
         ul.menu {
           width: 60%;
@@ -52,6 +51,7 @@
 @media only screen and (max-width: 991px) and (min-width: 768px) {
   #other {
     .container {
+      max-width: 100%;
       .other-menu {
         flex-direction: column;
 

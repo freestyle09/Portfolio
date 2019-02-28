@@ -57,35 +57,35 @@ header {
   }
 }
 
-// Media queries
-@media only screen and (max-height: 414px) {
-  header {
-    height: 414px;
-
-    .container {
-      #arrow {
-        bottom: 2%;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1201px) {
   header {
     .container {
       ul.menu {
         width: 80%;
       }
+      #arrow {
+        bottom: 5%;
+      }
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  header {
+    .container {
+      #arrow {
+        bottom: 5%;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 991px) {
   header {
     .background-image {
       background-attachment: inherit;
     }
     .container {
-      padding: 0;
       max-width: 100%;
 
       h1 {
@@ -99,7 +99,23 @@ header {
         font-size: 16px;
       }
       #arrow {
-        bottom: 7%;
+        bottom: 4%;
+      }
+    }
+  }
+}
+
+// Media queries
+@media only screen and (max-height: 414px) {
+  header {
+    height: 100vh;
+    .container {
+      #arrow {
+        .arrow {
+          bottom: 0;
+          height: 30px;
+          width: 30px;
+        }
       }
     }
   }

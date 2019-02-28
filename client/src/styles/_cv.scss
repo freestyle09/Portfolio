@@ -74,7 +74,6 @@
 @media only screen and (max-width: 1200px) and (min-width: 991px) {
   #cv {
     .container {
-      max-width: 100%;
       .flex {
         .menu {
           width: 60%;
@@ -88,14 +87,14 @@
   #cv {
     .container {
       max-width: 100%;
-      padding: 0;
+
       .flex {
         flex-direction: column;
         .menu {
           width: 100%;
           justify-content: space-around;
           margin-top: 50px;
-          font-size: 16px;
+          font-size: 15px;
           > li {
             width: 20%;
             text-align: center;
@@ -111,9 +110,6 @@
       .cv {
         width: 100%;
         align-items: center;
-        > div {
-          width: 95%;
-        }
       }
     }
   }
