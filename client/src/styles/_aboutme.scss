@@ -13,3 +13,11 @@
     }
   }
 }
+
+@media only screen and (max-width: 991px) {
+  #aboutme {
+    .container {
+      max-width: 100%;
+    }
+  }
+}

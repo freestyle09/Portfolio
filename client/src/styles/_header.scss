@@ -58,6 +58,17 @@ header {
 }
 
 // Media queries
+@media only screen and (max-height: 500px) {
+  header {
+    height: 500px;
+    .container {
+      #arrow {
+        bottom: 2%;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   header {
     .container {
