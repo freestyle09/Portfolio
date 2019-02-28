@@ -97,7 +97,7 @@ class Menu extends Component {
           </li>
         </ul>
         <button onClick={this.showMenu} ref={this.button} className='menu-button'>
-          <i class='fas fa-bars' />
+          <i className='fas fa-bars' />
         </button>
         <div ref={this.clickable} onClick={this.closeMenu} />
       </React.Fragment>

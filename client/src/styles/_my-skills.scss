@@ -21,6 +21,12 @@
     position: relative;
     z-index: 0;
     color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    br {
+      display: inline;
+    }
     h2 {
       padding-top: 50px;
     }
@@ -29,6 +35,13 @@
       padding-bottom: 50px;
       font-family: $font-Cinzel;
       text-align: center;
+      width: 80%;
+      > div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
 
       img {
         height: 50px;
@@ -63,4 +76,15 @@
 }
 
 @media only screen and (max-width: 768px) {
+  #my-skills {
+    .background-image {
+      background-attachment: inherit;
+    }
+    .container {
+      max-width: 100%;
+      br {
+        display: none;
+      }
+    }
+  }
 }
