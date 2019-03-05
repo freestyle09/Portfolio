@@ -19,18 +19,24 @@ class Header extends Component {
     );
   }
 
-  resize = () => {
-    if (window.innerWidth < 768) {
+  mql = window.matchMedia('(orientation: portrait)');
+
+  resize = m => {
+    if (m.matches) {
+      const header = document.querySelector('header');
+      let height = document.documentElement.clientHeight + 'px';
+      header.style.height = height;
+    } else {
       const header = document.querySelector('header');
       let height = document.documentElement.clientHeight + 'px';
       header.style.height = height;
     }
   };
   componentDidMount() {
-    window.addEventListener('resize', this.resize);
+    this.mql.addListener(this.resize);
   }
   componentWillUnmount() {
-    window.removeEventListener('resize', this.resize);
+    this.mql.removeListener(this.resize);
   }
 }
 
