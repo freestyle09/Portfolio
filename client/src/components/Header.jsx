@@ -24,12 +24,10 @@ class Header extends Component {
 
   changeOrientation = m => {
     if (m.matches) {
-      console.log('portair');
-      let height = document.documentElement.clientHeight + 'px';
+      let height = window.innerHeight + 'px';
       this.header.style.height = height;
     } else {
-      console.log('landscape');
-      let height = document.documentElement.clientHeight + 'px';
+      let height = window.innerHeight + 'px';
       this.header.style.height = height;
     }
   };
@@ -38,11 +36,14 @@ class Header extends Component {
     this.header = document.querySelector('header');
     this.mql = window.matchMedia('(orientation: portrait)');
 
-    if (window.innerWidth < 768) {
-      let height = document.documentElement.clientHeight + 'px';
+    if (window.innerWidth < 897) {
+      let height = window.innerHeight + 'px';
       this.header.style.height = height;
     }
     this.mql.addListener(this.changeOrientation);
+  }
+  componentWillUnmount() {
+    this.mql.removeListener(this.changeOrientation);
   }
 }
 
