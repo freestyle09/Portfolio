@@ -4,10 +4,10 @@ import Arrow from './Arrow';
 
 class Header extends Component {
   state = {};
-  header = React.createRef();
+
   render() {
     return (
-      <header ref={this.header}>
+      <header>
         <div className='background-image' />
         <div className='container'>
           <h1>Józef Rzadkosz</h1>
@@ -19,11 +19,18 @@ class Header extends Component {
     );
   }
 
-  componentDidMount() {
+  resize = () => {
     if (window.innerWidth < 768) {
-      const height = document.documentElement.clientHeight;
-      this.header.current.style.height = `${height}px`;
+      const header = document.querySelector('header');
+      let height = document.documentElement.clientHeight + 'px';
+      header.style.height = height;
     }
+  };
+  componentDidMount() {
+    window.addEventListener('resize', this.resize);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resize);
   }
 }
 
