@@ -26,7 +26,7 @@ class Header extends Component {
     setTimeout(() => {
       let height = window.innerHeight + 'px';
       this.header.style.height = height;
-    }, 1);
+    }, 100);
   };
 
   changeOrientation = async m => {
