@@ -6,6 +6,7 @@ class Header extends Component {
   state = {};
 
   render() {
+    console.log('rendered');
     return (
       <header>
         <div className='background-image' />
@@ -22,13 +23,17 @@ class Header extends Component {
   mql;
   header;
 
-  changeOrientation = m => {
+  changeOrientation = async m => {
     if (m.matches) {
-      let height = window.innerHeight + 'px';
-      this.header.style.height = height;
+      setTimeout(() => {
+        let height = window.innerHeight + 'px';
+        this.header.style.height = height;
+      }, 1);
     } else {
-      let height = window.innerHeight + 'px';
-      this.header.style.height = height;
+      setTimeout(() => {
+        let height = window.innerHeight + 'px';
+        this.header.style.height = height;
+      }, 1);
     }
   };
 
