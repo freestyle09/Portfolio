@@ -6,7 +6,6 @@ class Header extends Component {
   state = {};
 
   render() {
-    console.log('rendered');
     return (
       <header>
         <div className='background-image' />
@@ -23,31 +22,35 @@ class Header extends Component {
   mql;
   header;
 
+  changeHeight = () => {
+    setTimeout(() => {
+      let height = window.innerHeight + 'px';
+      this.header.style.height = height;
+    }, 1);
+  };
+
   changeOrientation = async m => {
     if (m.matches) {
-      setTimeout(() => {
-        let height = window.innerHeight + 'px';
-        this.header.style.height = height;
-      }, 1);
+      this.changeHeight();
     } else {
-      setTimeout(() => {
-        let height = window.innerHeight + 'px';
-        this.header.style.height = height;
-      }, 1);
+      this.changeHeight();
+    }
+  };
+
+  resize = () => {
+    if (window.innerWidth > 879) {
+      this.changeHeight();
     }
   };
 
   componentDidMount() {
     this.header = document.querySelector('header');
     this.mql = window.matchMedia('(orientation: portrait)');
-
-    if (window.innerWidth < 897) {
-      let height = window.innerHeight + 'px';
-      this.header.style.height = height;
-    }
     this.mql.addListener(this.changeOrientation);
+    window.addEventListener('resize', this.resize);
   }
   componentWillUnmount() {
+    window.removeEventListener('resize', this.resize);
     this.mql.removeListener(this.changeOrientation);
   }
 }

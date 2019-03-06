@@ -66,6 +66,7 @@
   #my-skills {
     .background-image {
       background-attachment: initial;
+      background-repeat: no-repeat;
     }
     .container {
       br {
@@ -77,9 +78,6 @@
 
 @media only screen and (max-width: 768px) {
   #my-skills {
-    .background-image {
-      background-attachment: initial;
-    }
     .container {
       max-width: 100%;
       br {
