@@ -10,7 +10,7 @@ module.exports = [
     technologies:
       'HTML5, CSS3, Angular, TypeScript, JavaScript, SASS, Font Awesome Angular Material, Bootstrap, Firebase. ',
     github: 'https://github.com/freestyle09/PC-Shop',
-    website: 'https://pc-shop-24.com.pl',
+    website: 'https://pc-shop-260af.firebaseapp.com/',
     url: 'pc-shop'
   },
   {
