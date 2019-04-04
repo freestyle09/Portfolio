@@ -22,36 +22,27 @@ class Header extends Component {
   mql;
   header;
 
-  changeHeight = () => {
-    setTimeout(() => {
-      let height = window.innerHeight + 'px';
-      this.header.style.height = height;
-    }, 100);
-  };
-
-  changeOrientation = async m => {
+  changeOrientation = m => {
     if (m.matches) {
-      this.changeHeight();
+      console.log('portair');
+      let height = document.documentElement.clientHeight + 'px';
+      this.header.style.height = height;
     } else {
-      this.changeHeight();
-    }
-  };
-
-  resize = () => {
-    if (window.innerWidth > 879) {
-      this.changeHeight();
+      console.log('landscape');
+      let height = document.documentElement.clientHeight + 'px';
+      this.header.style.height = height;
     }
   };
 
   componentDidMount() {
     this.header = document.querySelector('header');
     this.mql = window.matchMedia('(orientation: portrait)');
+
+    if (window.innerWidth < 768) {
+      let height = document.documentElement.clientHeight + 'px';
+      this.header.style.height = height;
+    }
     this.mql.addListener(this.changeOrientation);
-    window.addEventListener('resize', this.resize);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.resize);
-    this.mql.removeListener(this.changeOrientation);
   }
 }
 
